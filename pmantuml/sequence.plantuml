@@ -1,0 +1,16 @@
+@startuml 
+skinparam Style strictuml
+
+actor Person 
+Person ->ShoppingCart : Additems
+ShoppingCart -> CartItem: Getitems
+CartItem ->Process_order :product Deatils
+CartItem ->Process_order : Add the product
+CartItem ->Process_order :set the Address
+CartItem ->Process_order :calcualte value
+CartItem->CartItem : remove order
+
+
+
+
+@enduml

@@ -1,0 +1,25 @@
+@startuml 
+skinparam Style strictuml
+
+actor Admin 
+Admin ->LoginPage : Login to page
+LoginPage -> ForgotPassword :forgot password
+
+activate LoginPage
+
+activate ForgotPassword
+
+deactivate ForgotPassword
+LoginPage -> Verification :check Login details
+activate Verification
+Verification -> Database :valid login details
+deactivate Verification
+deactivate LoginPage
+
+
+
+
+
+
+LoginPage -> Admin : Login Successfully
+@enduml
